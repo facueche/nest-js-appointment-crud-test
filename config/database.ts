@@ -1,16 +1,5 @@
 import { ConfigService } from '@nestjs/config';
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
-import { DatabaseType } from 'typeorm';
-
-interface DatabaseConfigTypes {
-    DB_CONNECTION: DatabaseType;
-    DB_HOST: string;
-    DB_PORT: number;
-    DB_USERNAME: string;
-    DB_PASSWORD: string;
-    DB_NAME: string;
-    DB_SYNC: boolean;
-}
 
 export default class DatabaseConfig implements TypeOrmOptionsFactory
 {
