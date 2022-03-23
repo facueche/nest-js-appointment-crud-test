@@ -3,6 +3,7 @@ import Appointment from "../models/appointment";
 
 export default class AppointmentRegistered extends Event
 {
+    public static eventName: string = 'appointment.registered';
     private appointment: Appointment;
 
     public constructor(appointment: Appointment)

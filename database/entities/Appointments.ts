@@ -1,7 +1,7 @@
-import { Column, CreateDateColumn, Entity, Index, PrimaryColumn, UpdateDateColumn } from "typeorm";
+import { BaseEntity, Column, CreateDateColumn, Entity, Index, PrimaryColumn, UpdateDateColumn } from "typeorm";
 
 @Entity()
-export default class Appointments
+export default class Appointments extends BaseEntity
 {
     @Index()
     @PrimaryColumn({
