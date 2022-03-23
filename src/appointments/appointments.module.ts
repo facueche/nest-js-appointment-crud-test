@@ -3,7 +3,6 @@ import { SaveAppointmentsController } from './infrastructure/controllers/save.ap
 import { SaveAppointmentsService } from './application/services/save.appointments.service';
 import AppointmentsRepository from './infrastructure/repositories/appointments.repository';
 import StoreAppointment from './infrastructure/listeners/store.appointment';
-import EventManager from 'src/common/events/event.manager';
 
 @Module({
   controllers: [SaveAppointmentsController],
