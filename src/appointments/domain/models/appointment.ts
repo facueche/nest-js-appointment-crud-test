@@ -1,3 +1,6 @@
+import EventManager from "src/common/events/event.manager";
+import AppointmentRegistered from "../events/appointment.registered";
+
 export default class Appointment
 {
     private uuid: string;
@@ -9,7 +12,7 @@ export default class Appointment
         uuid: string,
         patientName: string,
         professionalName: string,
-        scheduleAt: Date
+        scheduleAt: Date,
     ) {
         this.uuid = uuid;
         this.patientName = patientName;
@@ -25,6 +28,29 @@ export default class Appointment
     ): Appointment
     {
         const appointment = new Appointment(uuid, patientName, professionalName, scheduleAt);
+        
+        EventManager.dispatch(new AppointmentRegistered(appointment));
+
         return appointment;
+    }
+
+    public getUuid(): string
+    {
+        return this.uuid;
+    }
+
+    public getPatientName(): string
+    {
+        return this.patientName;
+    }
+
+    public getProfessionalName(): string
+    {
+        return this.professionalName;
+    }
+
+    public getScheduleAt(): Date
+    {
+        return this.scheduleAt;
     }
 }

@@ -1,5 +1,6 @@
 import { Body, Controller, HttpCode, Post, UsePipes, ValidationPipe } from '@nestjs/common';
 import { SaveAppointmentsService } from 'src/appointments/application/services/save.appointments.service';
+import EventManager from 'src/common/events/event.manager';
 import AppointmentsRepository from '../repositories/appointments.repository';
 import SaveAppointmentRequestValidator from '../validators/save.appointment.request.validator';
 
@@ -22,6 +23,8 @@ export class SaveAppointmentsController
             .setProfessionalName(request.professionalName)
             .setScheduleAt(request.scheduleAt)
             .handle();
+
+        EventManager.commitAll();
 
         return appointment;
     }
