@@ -1,5 +1,6 @@
 import { ConfigService } from '@nestjs/config';
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
+import entities from 'database/entities';
 
 export default class DatabaseConfig implements TypeOrmOptionsFactory
 {
@@ -24,7 +25,7 @@ export default class DatabaseConfig implements TypeOrmOptionsFactory
             username: DB_USERNAME,
             password: DB_PASSWORD,
             database: DB_NAME,
-            entities: [],
+            entities: entities,
             synchronize: DB_SYNC
         };
     }
