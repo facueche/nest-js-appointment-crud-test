@@ -1,6 +1,6 @@
 import { Controller, Get, Param, UseFilters } from "@nestjs/common";
-import { HttpExceptionFilter } from "src/common/exceptions/HttpException.filter";
-import Appointment from "src/appointments/domain/models/Appointment";
+import { HttpExceptionFilter } from "../../../common/exceptions/HttpException.filter";
+import Appointment from "../../domain/models/Appointment";
 import AppointmentsRepository from "../repositories/Appointments.repository";
 
 @Controller('appointments')

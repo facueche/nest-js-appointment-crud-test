@@ -1,6 +1,6 @@
 import { ConfigService } from '@nestjs/config';
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
-import entities from 'database/entities';
+import entities from '../database/entities/index';
 
 export default class DatabaseConfig implements TypeOrmOptionsFactory
 {

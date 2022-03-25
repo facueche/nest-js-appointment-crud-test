@@ -1,4 +1,4 @@
-import Appointment from "src/appointments/domain/models/Appointment";
+import Appointment from "../../domain/models/Appointment";
 import AppointmentBuilderBaseService from "./AppointmentBuilderBase.service";
 
 export default class BuildAppointentService extends AppointmentBuilderBaseService

@@ -1,9 +1,9 @@
 import { Injectable } from "@nestjs/common";
 import { v4 as uuidv4 } from 'uuid';
-import Appointment from "src/appointments/domain/models/Appointment";
-import AppointmentEntity from "database/entities/Appointments";
-import AppointmentNotFoundException from "src/appointments/domain/exceptions/AppointmentNotFound.exception";
-import BuildAppointentService from "src/appointments/application/services/BuildAppointment.service";
+import Appointment from "../../domain/models/Appointment";
+import AppointmentEntity from "../../../../database/entities/Appointments";
+import AppointmentNotFoundException from "../../domain/exceptions/AppointmentNotFound.exception";
+import BuildAppointentService from "../../application/services/BuildAppointment.service";
 
 @Injectable()
 export default class AppointmentsRepository

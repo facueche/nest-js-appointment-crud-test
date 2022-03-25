@@ -1,8 +1,8 @@
 import { Body, Controller, HttpCode, Post, UsePipes, ValidationPipe } from '@nestjs/common';
 import AppointmentsRepository from '../repositories/Appointments.repository';
-import EventManager from 'src/common/events/Event.manager';
+import EventManager from '../../../common/events/Event.manager';
 import SaveAppointmentRequestValidator from '../validators/SaveAppointmentRequest.validator';
-import SaveAppointmentsService from 'src/appointments/application/services/SaveAppointments.service';
+import SaveAppointmentsService from '../../application/services/SaveAppointments.service';
 
 @Controller('appointments')
 export default class SaveAppointmentController
