@@ -4,9 +4,10 @@ import { SaveAppointmentsService } from './application/services/save.appointment
 import AppointmentsRepository from './infrastructure/repositories/appointments.repository';
 import EventProvider from './infrastructure/providers/event.provider';
 import FetchAppointmentsController from './infrastructure/controllers/fetch.appointments.controller';
+import FetchAppointmentByUuidController from './infrastructure/controllers/fetch.appointment.by.uuid.controller';
 
 @Module({
-  controllers: [SaveAppointmentsController, FetchAppointmentsController],
+  controllers: [SaveAppointmentsController, FetchAppointmentsController, FetchAppointmentByUuidController],
   providers: [SaveAppointmentsService, AppointmentsRepository, EventProvider]
 })
 export class AppointmentsModule {}
