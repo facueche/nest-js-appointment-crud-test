@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
-import AppointmentRegistered from "src/appointments/domain/events/appointment.registered";
-import EventEmitter from "src/common/events/event.emitter";
-import StoreAppointment from "../listeners/store.appointment";
+import AppointmentRegistered from "src/appointments/domain/events/AppointmentRegistered";
+import EventEmitter from "src/common/events/Event.emitter";
+import StoreAppointment from "../listeners/StoreAppointment";
 
 @Injectable()
 export default class EventProvider

@@ -1,13 +1,13 @@
 import { Module } from '@nestjs/common';
-import { SaveAppointmentsController } from './infrastructure/controllers/save.appointments.controller';
-import { SaveAppointmentsService } from './application/services/save.appointments.service';
-import AppointmentsRepository from './infrastructure/repositories/appointments.repository';
-import EventProvider from './infrastructure/providers/event.provider';
-import FetchAppointmentsController from './infrastructure/controllers/fetch.appointments.controller';
-import FetchAppointmentByUuidController from './infrastructure/controllers/fetch.appointment.by.uuid.controller';
+import AppointmentsRepository from './infrastructure/repositories/Appointments.repository';
+import EventProvider from './infrastructure/providers/Event.provider';
+import FetchAppointmentByUuidController from './infrastructure/controllers/FetchAppointmentByUuid.controller';
+import FetchAppointmentsController from './infrastructure/controllers/FetchAppointments.controller';
+import SaveAppointmentController from './infrastructure/controllers/SaveAppointment.controller';
+import SaveAppointmentsService from './application/services/SaveAppointments.service';
 
 @Module({
-  controllers: [SaveAppointmentsController, FetchAppointmentsController, FetchAppointmentByUuidController],
+  controllers: [SaveAppointmentController, FetchAppointmentsController, FetchAppointmentByUuidController],
   providers: [SaveAppointmentsService, AppointmentsRepository, EventProvider]
 })
 export class AppointmentsModule {}

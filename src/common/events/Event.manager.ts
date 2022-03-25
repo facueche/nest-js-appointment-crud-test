@@ -1,6 +1,6 @@
 import { EventEmitter2 } from "@nestjs/event-emitter";
-import Event from "./event";
-import EventEmitter from "./event.emitter";
+import Event from "./Event";
+import EventEmitter from "./Event.emitter";
 
 export default class EventManager
 {

@@ -1,5 +1,5 @@
-import EventManager from "src/common/events/event.manager";
-import AppointmentRegistered from "../events/appointment.registered";
+import AppointmentRegistered from "../events/AppointmentRegistered";
+import EventManager from "src/common/events/Event.manager";
 
 export default class Appointment
 {

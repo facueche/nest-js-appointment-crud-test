@@ -1,5 +1,5 @@
-import Event from "src/common/events/event";
-import Appointment from "../models/appointment";
+import Appointment from "../models/Appointment";
+import Event from "src/common/events/Event";
 
 export default class AppointmentRegistered extends Event
 {

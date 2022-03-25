@@ -1,6 +1,6 @@
 import { Controller, Get } from "@nestjs/common";
-import Appointment from "src/appointments/domain/models/appointment";
-import AppointmentsRepository from "../repositories/appointments.repository";
+import Appointment from "src/appointments/domain/models/Appointment";
+import AppointmentsRepository from "../repositories/Appointments.repository";
 
 @Controller('appointments')
 export default class FetchAppointmentsController

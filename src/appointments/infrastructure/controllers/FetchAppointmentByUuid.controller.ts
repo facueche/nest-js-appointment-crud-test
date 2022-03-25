@@ -1,7 +1,7 @@
 import { Controller, Get, Param, UseFilters } from "@nestjs/common";
-import Appointment from "src/appointments/domain/models/appointment";
-import { HttpExceptionFilter } from "src/common/events/HttpException.filter";
-import AppointmentsRepository from "../repositories/appointments.repository";
+import { HttpExceptionFilter } from "src/common/exceptions/HttpException.filter";
+import Appointment from "src/appointments/domain/models/Appointment";
+import AppointmentsRepository from "../repositories/Appointments.repository";
 
 @Controller('appointments')
 export default class FetchAppointmentByUuidController

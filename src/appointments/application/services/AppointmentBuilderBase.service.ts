@@ -1,4 +1,4 @@
-import Appointment from "src/appointments/domain/models/appointment";
+import Appointment from "src/appointments/domain/models/Appointment";
 
 export default abstract class AppointmentBuilderBaseService
 {
