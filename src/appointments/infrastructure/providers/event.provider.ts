@@ -1,6 +1,5 @@
 import { Injectable } from "@nestjs/common";
 import AppointmentRegistered from "src/appointments/domain/events/appointment.registered";
-import Event from "src/common/events/event";
 import EventEmitter from "src/common/events/event.emitter";
 import StoreAppointment from "../listeners/store.appointment";
 
