@@ -3,9 +3,10 @@ import { SaveAppointmentsController } from './infrastructure/controllers/save.ap
 import { SaveAppointmentsService } from './application/services/save.appointments.service';
 import AppointmentsRepository from './infrastructure/repositories/appointments.repository';
 import EventProvider from './infrastructure/providers/event.provider';
+import FetchAppointmentsController from './infrastructure/controllers/fetch.appointments.controller';
 
 @Module({
-  controllers: [SaveAppointmentsController],
+  controllers: [SaveAppointmentsController, FetchAppointmentsController],
   providers: [SaveAppointmentsService, AppointmentsRepository, EventProvider]
 })
 export class AppointmentsModule {}

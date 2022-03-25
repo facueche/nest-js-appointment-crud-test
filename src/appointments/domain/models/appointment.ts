@@ -27,9 +27,21 @@ export default class Appointment
         scheduleAt: Date
     ): Appointment
     {
-        const appointment = new Appointment(uuid, patientName, professionalName, scheduleAt);
+        const appointment = Appointment.make(uuid, patientName, professionalName, scheduleAt);
         
         EventManager.dispatch(new AppointmentRegistered(appointment));
+
+        return appointment;
+    }
+
+    public static make(
+        uuid: string,
+        patientName: string,
+        professionalName: string,
+        scheduleAt: Date
+    ): Appointment
+    {
+        const appointment = new Appointment(uuid, patientName, professionalName, scheduleAt);
 
         return appointment;
     }
